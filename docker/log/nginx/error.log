@@ -1,0 +1,7 @@
+2017/06/10 22:16:08 [emerg] 1#1: host not found in upstream "game-gym-php:9000" in /etc/nginx/conf.d/upstream.conf:1
+2017/06/10 22:19:45 [emerg] 1#1: host not found in upstream "game-gym-php:9000" in /etc/nginx/conf.d/upstream.conf:1
+2017/06/10 22:22:43 [emerg] 1#1: host not found in upstream "game-gym-php:9000" in /etc/nginx/conf.d/upstream.conf:1
+2017/06/10 22:28:20 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2017/06/10 22:36:49 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2017/06/10 23:04:29 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2017/06/10 23:07:48 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored

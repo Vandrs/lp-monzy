@@ -1,0 +1,66 @@
+version: '2'
+
+#############
+# Services
+#############
+services:
+
+    lp-monzy-mysql:
+        container_name: lp-monzy-mysql
+        build: ./mysql
+        expose:
+            - "3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=lpmonzy123
+            - MYSQL_DATABASE=lpmonzy
+            - MYSQL_USER=lpmonzy
+            - MYSQL_PASSWORD=lpmonzy123
+        volumes:
+            - ./data/mysql/mysql:/var/lib/mysql
+            - ./data/mysql/data:/var/data
+        networks:
+            gamegym_net:
+                ipv4_address: 175.25.0.3
+
+    lp-monzy-php:
+        container_name: lp-monzy-php
+        build: ./php
+        volumes_from: 
+            - volume_www
+        expose: 
+            - "9000"
+        links:
+            - "lp-monzy-mysql"
+        networks:
+            gamegym_net:
+                ipv4_address: 175.25.0.5
+
+    lp-monzy-nginx:
+        container_name: lp-monzy-nginx
+        build: ./nginx
+        volumes_from: 
+            - volume_www
+        volumes:
+            - ./log/nginx:/var/log/nginx
+        expose: 
+            - "80"
+            - "443"
+        ports:
+            - "8080:80"
+        links: 
+            - "lp-monzy-php"
+        networks:
+            gamegym_net:
+                ipv4_address: 175.25.0.6
+
+    volume_www:
+        build: ./volume
+        volumes: 
+            - ../:/var/www/monzy-lp
+
+networks:
+    gamegym_net:
+        driver: bridge
+        ipam:
+          config:
+          - subnet: 175.25.0.0/24

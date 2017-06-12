@@ -1,0 +1,28 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.leadFormArea {
+	border: solid 1px #CCC;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background: linear-gradient(-135deg, #6ca3a3, #c3be93);
+
+}
+
+.leadFormArea input[placeholder], .leadFormArea [placeholder], .leadFormArea *[placeholder] {
+    color: #CCC;
+}
+
+
+.leadFormArea .btn-default {
+	width: 100%;
+	color: $text-color;
+	border: solid 1px #067879;
+}
