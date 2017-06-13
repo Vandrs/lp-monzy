@@ -11,6 +11,7 @@ use App\Utils\StringUtil;
 use App\Enums\EnumProfile;
 use Log;
 use Datatables;
+use DB;
 
 class LeadController extends Controller
 {
@@ -39,20 +40,17 @@ class LeadController extends Controller
 	{
 		return Datatables::eloquent(Lead::query())
 						 ->filter(function($query) use ($request) {
-								if (request()->has('name')) {
-			                        $query->where('name', 'like', "%{request('name')}%");
+								if ($request->has('name') && $request->name) {
+			                        $query->where('name', 'like', "%".$request->name."%");
 			                    }
-			                    if (request()->has('email')) {
-			                        $query->where('email', 'like', "%{request('email')}%");
+			                    if ($request->has('profile') && $request->profile) {
+			                        $query->where('profile', '=', $request->profile);
 			                    }
-			                    if (request()->has('favorite')) {
-			                        $query->where('favorite', '=', "{request('favorite')}");
+			                    if ($request->has('dt_ini') && $request->dt_ini) {
+			                        $query->where(DB::raw("DATE(created_at)"), '>=', $request->dt_ini);
 			                    }
-			                    if (request()->has('dt_ini')) {
-			                        $query->where('created_at', '>=', "{request('dt_ini')}");
-			                    }
-			                    if (request()->has('dt_fim')) {
-			                        $query->where('created_at', '<=', "{request('dt_fim')}");
+			                    if ($request->has('dt_fim') && $request->dt_fim) {
+			                        $query->where(DB::raw("DATE(created_at)"), '<=', $request->dt_fim);
 			                    }
 						 })
 						 ->editColumn('phone', function(Lead $lead) {
@@ -69,16 +67,26 @@ class LeadController extends Controller
 						 ->editColumn('created_at', function(Lead $lead) {
 						 	return $lead->created_at->format('d/m/Y');
 						 })
+						 ->addColumn('actions', function(Lead $lead) { 
+						 	return '<a href="#" class="deleteLead" title="Remover" data-id="'.$lead->id.'"><i class="glyphicon glyphicon-trash"></i></a>';
+						 })
+						 ->rawColumns(['actions'])
 						 ->make(true);
 	}
 
-	public function updateStatus()
+	public function delete($id)
 	{
-
-	}
-
-	public function delete()
-	{
-
+		try {
+			$lead = Lead::find($id);
+			if ($lead) {
+				$lead->delete();
+				return response()->json(['msg' => 'Removido com sucesso.'], 200);
+			} else {
+				return response()->json(['msg' => 'Registro não encontrado.'], 404);
+			}
+		} catch (\Exception $e) {
+			return response()->json(['msg' => 'Ocorreu um erro inesperado.'], 500);
+		}
+		
 	}
 }

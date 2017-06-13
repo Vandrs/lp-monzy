@@ -21,3 +21,4 @@ Route::get('/', 'SiteController@index')->name('index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/api/leads','LeadController@create')->name('lead.create');
 Route::get('/api/leads','LeadController@datatables')->name('lead.list');
+Route::delete('/api/leads/{id}','LeadController@delete')->name('lead.delete');
