@@ -17,8 +17,23 @@
     <link href="{{ asset('css/site.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="site">
-        <div class="container-fluid">
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Monzy</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">SOBRE</a></li>
+            <li><a href="#contact">CONTATO</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+        <div class="container">
             <div class='row'>
                 <div class="col-xs-12 col-md-4 col-md-offset-4 leadFormArea">
                     <form id="leadForm" action="#" method="POST">
@@ -72,7 +87,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <!-- Scripts -->
     <script src="{{ asset('js/site.js') }}"></script>
 </body>

@@ -1,6 +1,11 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@font-face {
+	font-family: "Lato";
+	font-style: italic;
+	font-weight: bold;
+	src: url("/font/lato/Lato-Regular.ttf") format("truetype");
+}
 
 // Variables
 @import "variables";
