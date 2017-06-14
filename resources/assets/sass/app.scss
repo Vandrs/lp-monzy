@@ -1,11 +1,5 @@
 
-// Fonts
-@font-face {
-	font-family: "Lato";
-	font-style: italic;
-	font-weight: bold;
-	src: url("/font/lato/Lato-Regular.ttf") format("truetype");
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400,700&subset=latin-ext');
 
 // Variables
 @import "variables";
@@ -17,6 +11,10 @@
 @import "./components/datatables";
 
 @import "./components/bootstrap-datepicker";
+
+.navbar-brand {
+	padding: 10px 15px;
+}
 
 .navbar-default, 
 .panel-default, 

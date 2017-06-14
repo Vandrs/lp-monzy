@@ -1,6 +1,7 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700&subset=latin-ext');
+
 
 // Variables
 @import "variables";
@@ -8,14 +9,41 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-body { padding-top: 70px; }
+body { 
+	padding-top: 70px; 
+	background-color: #e5e5e5;
+	background-image: url('/images/background-header.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.navbar-brand {
+	padding: 10px 15px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #f9b434;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a.active {
+	background-color: #007979;
+	border-radius: 5px;
+	color: #f9b434;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+}
+
+.navbar-default {
+    background: none;
+    border: none;
+}
 
 .leadFormArea {
 	border: solid 1px #CCC;
     padding: 20px 20px;
     border-radius: 10px;
     background: linear-gradient(-135deg, #6ca3a3, #c3be93);
-
 }
 
 .leadFormArea input[placeholder], .leadFormArea [placeholder], .leadFormArea *[placeholder] {
@@ -27,4 +55,76 @@ body { padding-top: 70px; }
 	width: 100%;
 	color: $text-color;
 	border: solid 1px #067879;
+}
+
+div.title-area {
+	height: 600px;	
+	padding-top: 170px;
+}
+
+div.title-area h1 {
+	font-size: 50px;
+	text-shadow: 2px 1px 1px rgba(150, 150, 150, 1);
+	font-weight: 300;
+}
+
+.section {
+	width: 100%;
+}
+
+.section-content h2 {
+	margin-top: 30px;
+	font-size: 65px;
+	color: #067879;
+	font-weight: 300;
+}
+
+.section-content .text-about {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #717171;
+	font-size: 17px;
+}
+
+.game-cover {
+    background-image: url('/images/cover-img-play-monzy.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 35%;
+}
+
+.section-form {
+	background-color: #067879;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.section-form h2 {
+	font-weight: 300;
+	font-size: 28px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.section-footer {
+	font-weight: bold;
+	color: #242424;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+ul.footer-menu {
+	list-style: none;
+}
+ul.footer-menu li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+ul.footer-menu li a, 
+ul.footer-menu li a:hover, 
+ul.footer-menu li a:active {
+	color: #242424;
 }

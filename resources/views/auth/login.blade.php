@@ -28,8 +28,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{url('/')}}">
+                        <img src="{{url('/images/logo-header.png')}}" title="Monzy" alt="Logo Monzy">
                     </a>
                 </div>
 

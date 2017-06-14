@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 41);
+/******/ 	return __webpack_require__(__webpack_require__.s = 42);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -471,7 +471,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
 
 /***/ }),
 /* 2 */
@@ -11843,7 +11843,7 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(28);
+window._ = __webpack_require__(29);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -11853,7 +11853,7 @@ window._ = __webpack_require__(28);
 
 try {
   window.$ = window.jQuery = __webpack_require__(2);
-  __webpack_require__(27);
+  __webpack_require__(28);
 } catch (e) {}
 
 /**
@@ -11897,6 +11897,23 @@ if (token) {
 
 /***/ }),
 /* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeadProvider; });
+var LeadProvider = {
+	post: function post(param) {
+		return axios.post('/api/leads', param);
+	},
+	delete: function _delete(id) {
+		return axios.delete('/api/leads/' + id);
+	}
+};
+
+
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports) {
 
 /*!
@@ -14279,7 +14296,7 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -31368,10 +31385,10 @@ if (typeof jQuery === 'undefined') {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30), __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(31), __webpack_require__(32)(module)))
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -31561,7 +31578,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 var g;
@@ -31588,7 +31605,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -31616,15 +31633,15 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 32 */,
-/* 33 */
+/* 33 */,
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_leadProvider__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_leadProvider__ = __webpack_require__(27);
 __webpack_require__(26);
-__webpack_require__(36);
+__webpack_require__(38);
 
 
 
@@ -31707,9 +31724,10 @@ var AlertContainer = {
 };
 
 /***/ }),
-/* 34 */,
 /* 35 */,
-/* 36 */
+/* 36 */,
+/* 37 */,
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32322,30 +32340,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 }, window.jQuery, window.Zepto);
 
 /***/ }),
-/* 37 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeadProvider; });
-var LeadProvider = {
-	post: function post(param) {
-		return axios.post('/api/leads', param);
-	},
-	delete: function _delete(id) {
-		return axios.delete('/api/leads/' + id);
-	}
-};
-
-
-
-/***/ }),
-/* 38 */,
 /* 39 */,
 /* 40 */,
-/* 41 */
+/* 41 */,
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(33);
+module.exports = __webpack_require__(34);
 
 
 /***/ })
