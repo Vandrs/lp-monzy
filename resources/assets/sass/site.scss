@@ -2,14 +2,15 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700&subset=latin-ext');
 
-
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+
 body { 
+	position: relative;
 	padding-top: 70px; 
 	background-color: #e5e5e5;
 	background-image: url('/images/background-header.png');
@@ -25,7 +26,12 @@ body {
 	color: #f9b434;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a.active {
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li.active > a, 
+.navbar-default .navbar-nav > li.active > a:hover, 
+.navbar-default .navbar-nav > li.active > a:active 
+.navbar-default .navbar-nav > li.active > a:focus {
 	background-color: #007979;
 	border-radius: 5px;
 	color: #f9b434;
@@ -35,7 +41,7 @@ body {
 }
 
 .navbar-default {
-    background: none;
+    background: #026161;
     border: none;
 }
 
@@ -50,6 +56,10 @@ body {
     color: #CCC;
 }
 
+.bg-form-content{
+	width: 100%;
+	background-color: #067879;
+}
 
 .leadFormArea .btn-default {
 	width: 100%;
@@ -68,9 +78,7 @@ div.title-area h1 {
 	font-weight: 300;
 }
 
-.section {
-	width: 100%;
-}
+
 
 .section-content h2 {
 	margin-top: 30px;
@@ -96,7 +104,6 @@ div.title-area h1 {
 }
 
 .section-form {
-	background-color: #067879;
 	padding-top: 20px;
 	padding-bottom: 40px;
 }
@@ -127,4 +134,66 @@ ul.footer-menu li a,
 ul.footer-menu li a:hover, 
 ul.footer-menu li a:active {
 	color: #242424;
+}
+
+
+@media (max-width: $screen-md-max) {
+
+	div.title-area h1 {
+		font-size: 40px;
+	} 	
+
+	div.title-area {
+		height: 400px;	
+		padding-top: 100px;
+	}
+
+	.section-content h2 {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: $screen-sm-max) {
+
+	div.title-area h1 {
+		font-size: 30px;
+	}
+
+	.section-content h2 {
+		font-size: 30px;
+	}	
+
+	div.title-area {
+		height: 300px;	
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+
+	.navbar-header a img {
+		max-width: 100px;
+	}
+
+	div.title-area h1 {
+		font-size: 16px;
+	} 
+
+	.section-content h2 {
+		font-size: 16px;
+	}
+
+	.section-form h2 {
+		font-size: 16px;
+	}	
+
+	div.title-area {
+		height: auto;	
+		padding-top: 0px;
+		padding-bottom: 20px;
+	}
+
+	.section-content .text-about {
+		font-size: 14px;
+	}
 }
