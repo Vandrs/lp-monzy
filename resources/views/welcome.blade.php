@@ -10,11 +10,18 @@
     <link rel="manifest" href="/manifest.json">
     @include('partials.favicon')
     <meta name="description" content="Monzy, o maior time de Experts em Jogos. Jogue, Ensine e receba por isso.">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     @if(config('app.env') == 'production')
     <link rel="canonical" href="https://play.monzy.com.br">
     @endif
+        <meta property="og:title" content="Monzy, o maior time de Experts em Jogos.">
+        <meta property="og:description" content="Você já imaginou ganhar dinheiro jogando online ou até mesmo melhorar sua performance com jogadores experientes</strong> a qualquer momento? A nova plataforma Monzy oferece essa oportunidade única para quem é apaixonado pelo mundo dos jogos.">
+        <meta property="og:site_name" content="Monzy">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:url" content="{{url('')}}">
+        <meta property="og:image" content="{{url('/images/logo-share.png')}}">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
     <link href="{{ asset('css/site.css') }}" rel="stylesheet">
     @if(config('app.env') == 'production')
