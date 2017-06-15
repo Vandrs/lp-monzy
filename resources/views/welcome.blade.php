@@ -18,7 +18,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/site.css') }}" rel="stylesheet">
 </head>
-<body>
+<body id="home">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -40,7 +40,7 @@
       </div>
     </nav>
     
-    <div class="container" id="home">
+    <div class="container">
         <div class='row'>
             <div class="col-xs-12 col-md-10">
                 <div class="title-area left">
@@ -57,7 +57,7 @@
             </div>
             <div class="col-xs-12 col-md-8 col-md-offset-2 text-center text-about">
                 Você já imaginou <strong>ganhar dinheiro jogando online</strong> ou até mesmo melhorar sua performance com 
-                <strong>jogadores experiêntes</strong> a qualquer momento? A nova plataforma <storng>Monzy</storng> oferece essa oportunidade 
+                <strong>jogadores experientes</strong> a qualquer momento? A nova plataforma <storng>Monzy</storng> oferece essa oportunidade 
                 única para quem é apaixonado pelo mundo dos jogos. A plataforma <strong>conecta jogadores de alto, médio e 
                 baixo nível</strong>, possibilitando um treinamento para <strong>melhorar o seu nível de habilidade</strong>
                  e fazer com que o cenário do e-Sports cresça cada vez mais.
