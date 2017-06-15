@@ -14,7 +14,7 @@
     <link rel="canonical" href="https://play.monzy.com.br">
     @endif
         <meta property="og:title" content="Monzy, o maior time de Experts em Jogos.">
-        <meta property="og:description" content="Você já imaginou ganhar dinheiro jogando online ou até mesmo melhorar sua performance com jogadores experientes</strong> a qualquer momento? A nova plataforma Monzy oferece essa oportunidade única para quem é apaixonado pelo mundo dos jogos.">
+        <meta property="og:description" content="Você já imaginou ganhar dinheiro jogando online ou até mesmo melhorar sua performance com jogadores experientes a qualquer momento? A nova plataforma Monzy oferece essa oportunidade única para quem é apaixonado pelo mundo dos jogos.">
         <meta property="og:site_name" content="Monzy">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="pt_BR">
