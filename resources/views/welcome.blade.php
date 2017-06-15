@@ -72,7 +72,7 @@
     <div class="container section-content" id="about">
         <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-                <h2>JOGUE ENSINE E <strong>RECEBA</strong> POR ISSO</h2>
+                <h2>JOGUE, ENSINE E <strong>RECEBA</strong> POR ISSO</h2>
             </div>
             <div class="col-xs-12 col-md-8 col-md-offset-2 text-center text-about">
                 Você já imaginou <strong>ganhar dinheiro jogando online</strong> ou até mesmo melhorar sua performance com 
@@ -92,7 +92,7 @@
     <div class="container section-form" id="contact">
         <div class='row'>
             <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-                <h2>Deixe o seu contato <strong>contato</strong> para ser <strong>um dos primeiros</strong> a fazer parte do time <strong>Monzy</strong>.</h2>
+                <h2>Deixe o seu <strong>contato</strong> para ser <strong>um dos primeiros</strong> a fazer parte do time <strong>Monzy</strong>.</h2>
             </div>
         </div>
         <div class='row'>
