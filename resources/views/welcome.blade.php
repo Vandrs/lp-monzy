@@ -10,11 +10,11 @@
     <link rel="manifest" href="/manifest.json">
     @include('partials.favicon')
     <meta name="description" content="Monzy, o maior time de Experts em Jogos. Jogue, Ensine e receba por isso.">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="canonical" href="https://www.hagah.com.br/">
-
+    @if(config('app.env') == 'production')
+    <link rel="canonical" href="https://play.monzy.com.br">
+    @endif
     <!-- Styles -->
     <link href="{{ asset('css/site.css') }}" rel="stylesheet">
     @if(config('app.env') == 'production')
