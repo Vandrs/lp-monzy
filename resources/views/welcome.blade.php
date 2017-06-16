@@ -37,7 +37,7 @@
     </script>
     @endif
 </head>
-<body id="home">
+<body data-spy="scroll" data-offset="65">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -59,7 +59,7 @@
       </div>
     </nav>
     
-    <div class="container">
+    <div class="container" id="home">
         <div class='row'>
             <div class="col-xs-12 col-md-10">
                 <div class="title-area left">

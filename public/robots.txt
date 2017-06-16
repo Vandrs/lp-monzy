@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /api/
 Disallow: /login/
+Sitemap: http://sitemaps.linklar.com.br/sitemap.xml
