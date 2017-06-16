@@ -25,7 +25,7 @@ class LeadController extends Controller
 		try {
 			$leadService = new CreateLeadService();
 			$lead = $leadService->create($request->all());
-			return response()->json(['msg' => '<strong>'.$lead->name.'</strong> obrigado por manistar seu interesse em fazer parte da Monzy. Em breve entraremos em contato. Aguarde por novidades!'], 200);
+			return response()->json(['msg' => '<strong>'.$lead->name.'</strong> obrigado por manifestar seu interesse em fazer parte da Monzy. Em breve entraremos em contato. Aguarde por novidades!'], 200);
 		} catch (ValidationException $e) {
 			Log::error($e->getMessage());
 			Log::error($e->getTraceAsString());
