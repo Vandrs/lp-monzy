@@ -41,7 +41,7 @@ body {
 }
 
 .navbar-default {
-    background: #000;
+    background: #FFF;
     border: none;
 }
 
@@ -136,6 +136,11 @@ ul.footer-menu li a:active {
 	color: #242424;
 }
 
+@media (max-width: 1600px) and (min-width:1400px) {
+	.section-content {
+		margin-top: 30px;
+	}
+}
 
 @media (max-width: $screen-md-max) {
 
@@ -197,3 +202,4 @@ ul.footer-menu li a:active {
 		font-size: 14px;
 	}
 }
+

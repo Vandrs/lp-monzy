@@ -165,7 +165,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                MONZY © COPYRIGHT 2017. TODOS OS DIREITOS RESERVADOR
+                MONZY © COPYRIGHT 2017. TODOS OS DIREITOS RESERVADOS
             </div>
         </div>
     </div>
