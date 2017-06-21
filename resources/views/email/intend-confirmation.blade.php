@@ -23,7 +23,7 @@
                                              </tr>
                                              <tr>
                                                 <td style="text-align:center;font-size:20px;color:#f4b531;font-weight:bold; line-height: 28px;">
-                                                   Olá, Vanderson Nunes, bem vindo a Monzy!
+                                                   Olá, {{$name}}, bem vindo a Monzy!
                                                 </td>
                                              </tr>
                                              <tr>
