@@ -9,9 +9,11 @@ use App\Exceptions\ValidationException;
 use App\Models\Lead;
 use App\Utils\StringUtil;
 use App\Enums\EnumProfile;
+use App\Mail\IntendConfirmation;
 use Log;
 use Datatables;
 use DB;
+use Mail;
 
 class LeadController extends Controller
 {
@@ -25,6 +27,9 @@ class LeadController extends Controller
 		try {
 			$leadService = new CreateLeadService();
 			$lead = $leadService->create($request->all());
+			$mail = new IntendConfirmation($lead->email,$lead->name);
+			$mail->onConnection('database')->onQueue('email');
+			Mail::queue($mail);
 			return response()->json(['msg' => '<strong>'.$lead->name.'</strong> obrigado por manifestar seu interesse em fazer parte da Monzy. Em breve entraremos em contato. Aguarde por novidades!'], 200);
 		} catch (ValidationException $e) {
 			Log::error($e->getMessage());
